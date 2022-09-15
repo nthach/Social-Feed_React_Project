@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import CommentsForm from "./Components/Form/CommentsForm";
+import React, {useState} from "react";
+import DisplayPosts from "./Components/DisplayPosts"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const[entries, setEntries] = useState([{date: '11/23/2022'}])
+  return ( 
+    <div>
+      <DisplayPosts parentEntries={entries} />
+      <CommentsForm />
+      
+      
+    
     </div>
   );
 }
 
-export default App;
+export default App; //calling
