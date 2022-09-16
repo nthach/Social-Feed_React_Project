@@ -1,5 +1,4 @@
 
-
  
 function CommentsForm() {//add function and ref file name
     const handleSubmit = event => {
@@ -9,8 +8,8 @@ function CommentsForm() {//add function and ref file name
 
 
      return ( 
-        <div className='divMain'>
-            <h1>Add New post</h1>
+        <div class='div-form' style={{backgroundColor: 'rgb(217,226,238)'}}>
+
             <form onSubmit={handleSubmit}>
             <label>
                     <p>Name</p>
@@ -18,7 +17,7 @@ function CommentsForm() {//add function and ref file name
             </label>
 
             <label>
-                    <p>Comment</p>
+                    <p>Create new post</p>
                     <input type='text' />
             </label>
             <button type="submit">Sumbit</button>

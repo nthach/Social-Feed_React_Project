@@ -1,13 +1,26 @@
 import CommentsForm from "./Components/Form/CommentsForm";
 import React, {useState} from "react";
-import DisplayPosts from "./Components/DisplayPosts"
+import DisplayPosts from "./Components/DisplayPosts/DisplayPosts";
+import NavBar from "./Components/NavBar/NavBar";
+import './App.css';
+
+
+
 
 function App() {
   const[entries, setEntries] = useState([{date: '11/23/2022'}])
+ 
+
+ 
+
   return ( 
     <div>
-      <DisplayPosts parentEntries={entries} />
+      <NavBar />
       <CommentsForm />
+      <DisplayPosts />
+      
+     
+  
       
       
     
@@ -15,4 +28,4 @@ function App() {
   );
 }
 
-export default App; //calling
+export default App; //instantiate

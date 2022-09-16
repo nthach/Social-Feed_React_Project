@@ -1,29 +1,19 @@
+import { useState } from "react";
 
 
-const DisplayPosts = (props) => {
+
+function DisplayPosts(props) {
+   
+
     return (
-        <table>
-            <thead>
-              <tr>
-                <th>Entry number</th>
-                <th>Weight</th>
-                <th>Date</th>
-    
-              </tr>
-    
-            </thead>
-            <tbody>
-            {props.parentEntries.map((entry, index) => {
-                return (
-                <tr>
-                    <td>{index +1}</td>
-                    <td>{entry.weight}</td>
-                    <td>{entry.date}</td>
-                </tr>
-                );
-            })}    
-            </tbody>
-    
-        </table>
+        <div class='border-box' style={{backgroundColor: 'lightblue'}}>
+            <h3>Comments:</h3>
+            <button>Like</button>
+            <button>Dislike</button>
+       
+        </div>    
+
     );
 }
+
+export default DisplayPosts;
